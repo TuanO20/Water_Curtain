@@ -1,0 +1,133 @@
+$grey: rgb(228, 228, 228);
+$black: rgb(0, 0, 0);
+$blue: #7AB2D3;
+$dark-blue: #309af6;
+$navy: #4A628A;
+$green: #34a353;
+
+.container {
+    min-width: 360px;
+    width: 30%;
+    height: 82%;
+    
+    margin: 2rem auto;
+    padding: 3rem;
+
+    background-color: white;
+    border-radius: 2rem;
+    
+
+    h3 {
+        //color: #FFDC7F;
+        margin-bottom: 3rem;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    form {
+        margin: 0 1rem;
+
+
+        input {
+            width: 100%;
+            margin-top: 0.5rem;
+    
+            border: none;
+            border-bottom: 3px solid $grey;
+    
+            &::placeholder {
+                padding: 0 0 2rem 2rem;
+    
+            }
+    
+            &:focus {
+                outline: none;
+                border-bottom: 3px solid $black;
+            }
+        }
+    
+        .userNameTitle, .passwordTitle {
+            color: $blue;
+            font-weight: bold;
+        }
+    
+        .username {
+            position: relative;
+            //margin: 0 1rem 2rem 1rem;
+            margin-bottom: 2rem;
+
+            .userIcon {
+                position: absolute;
+                top: 2.2rem;
+                left: 0.5rem;
+            }
+        }
+    
+        .password {
+            position: relative;
+    
+            .passwordIcon {
+                position: absolute;
+                top: 2.2rem;
+                left: 0.5rem;
+            }
+        }
+
+        .forgotPass {
+            margin-top: 1rem;
+            text-align: end;
+
+            a {
+                text-decoration: none;
+                color: $navy;
+
+                font-weight: bold;
+            }
+        }
+
+        .normalButton {
+            width: 100%;
+            padding: 0.5rem;
+            margin-top: 2rem;
+            border-radius: 2rem;
+            border: none;
+
+            background-color: $navy;
+
+            font-weight: bold;
+        }
+
+        .ggLogIn {
+            margin-top: 2rem;
+            text-align: center;
+
+            div:first-child {
+                color: $navy;
+                font-weight: bold;
+            }
+
+
+            .ggButton {
+                width: 100%;
+                border-radius: 2rem;
+                padding: 0.5rem;
+
+                background-color: $dark-blue;
+                border: none;
+
+
+                .ggIcon {
+                    margin-right: 0.7rem;
+
+                }
+            }
+        }
+    }
+
+    
+
+    
+
+    
+}
+
