@@ -1,0 +1,14 @@
+$white: #e2e8f0;
+
+.container {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+
+
+    .content {
+        width: 80vw;
+        background-color: $white;
+        //padding: 1.5rem;
+    }
+}

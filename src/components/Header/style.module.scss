@@ -1,0 +1,76 @@
+//$blue: #3caed6;
+
+.header {
+    width: 80vw;
+    min-width: 500px;
+    height: 10vh;
+    display: flex;
+    background-color: var(--primary-color);
+
+    .slider {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        margin-right: 1.5rem;
+    }
+
+    .user {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        position: relative;
+
+        //min-width: ;
+        margin-left: 60vw;
+        margin-right: 20px;
+        cursor: pointer;
+
+        .userIcon {
+            //width: 2rem;
+        }
+
+        .userName {
+            margin: 0 1rem;
+            font-weight: bold;
+
+            user-select: none;
+        }
+
+        .checkList {
+            display: none;
+
+            ul {
+                list-style-type: none;
+
+                li {
+                    background-color: var(--background-color);
+                    padding: 0.8rem;
+
+                    .iconHeader {
+                        margin-right: 1rem;
+                    }
+                }
+
+                li:hover {
+                    background-color: var(--grey);
+                    color: var(--blue);
+                }
+            }
+        }
+
+        .showList {
+            display: block;
+
+            position: absolute;
+            top: 3rem;
+            right: 1.5rem;
+
+            
+        }
+    }
+
+
+
+}

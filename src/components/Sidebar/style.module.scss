@@ -1,0 +1,86 @@
+// $white: #f1f5f9;
+// $dark-gray: #475569;
+
+.sidebar {
+    width: 20vw;
+    min-width: 200px;
+    background-color: var(--secondary-color);
+    color: var(--background-color);
+    padding: 1.5rem;
+
+
+    .logo {
+        display: flex;
+        margin-bottom: 2rem;
+
+        img{
+            width: 4vw;
+            height: 10vh;
+            min-width: 30px;
+        }
+
+
+        .logoTitle {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            margin-left: 1.5rem;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+    }
+    
+    .sidebarList {
+        margin-top: 4rem;
+        color: var(--light-blue);
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            
+
+            li {
+                padding: 1rem;
+                margin-bottom: 2rem;
+                font-size: var(--font-size);
+                cursor: pointer;
+
+
+                &:hover {
+                    //background-color: var(--grey);
+                    background-color: var(--hover-color);
+                }
+                
+                .sidebarIcon {
+                    margin-right: 1rem;
+                }
+            }
+        }
+    }
+
+    .social {
+        margin-top: 5rem;
+        text-align: center;
+
+        h5 {
+            font-size: 1.5rem;
+        }
+
+        .iconSocial {
+            width: 1.5rem;
+            max-width: 1.5rem;
+            height: 1.5rem;
+            max-height: 2rem;
+            color: var(--light-blue); 
+            margin-right: 0.6rem;
+            margin-top: 0.5rem;
+            text-align: center;
+
+
+            &:hover {
+                color: var(--blue);
+            }
+        }
+    }
+}

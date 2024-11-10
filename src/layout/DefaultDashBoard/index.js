@@ -1,12 +1,22 @@
 import { Outlet } from 'react-router-dom';
-import './style.module.scss';
+import Header from '../../components/Header';
+import Sidebar from '../../components/Sidebar';
+
+import styles from './style.module.scss';
 
 function DefaultDashBoard() {
 
     return (
         <>
-            Default DashBoard
-            <Outlet/>
+            <div className={styles.container}>
+                <Sidebar></Sidebar>
+                <div className={styles.content}>
+                    <Header></Header>
+                    <div className={styles.main}>
+                        <Outlet></Outlet>
+                    </div>
+                </div>
+            </div>
         </>
     );
 }
