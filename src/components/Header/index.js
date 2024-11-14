@@ -1,19 +1,27 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleUser } from '@fortawesome/free-solid-svg-icons';
 import { faUser, faGear, faRightFromBracket, faCaretDown } from '@fortawesome/free-solid-svg-icons';
-import { useState } from 'react';
+import { useContext, useState } from 'react';
+import { auth } from '../../firebase/config';
+import { AuthContext } from '../PrivateRoute';
 
 import styles from './style.module.scss';
 import Slider from '../Slider';
 import clsx from 'clsx';
 
 
-
 function Header() {
     const [isShowing, setIsShowing] = useState(false);
 
+    const dataUser = useContext(AuthContext).user;
+    console.log(dataUser);
+
     const handleShowHeaderList = () => {
         setIsShowing(!isShowing);
+    }
+
+    const handleLogout = () => {
+        auth.signOut();
     }
 
     return (
@@ -25,12 +33,11 @@ function Header() {
                     </div>
 
                     <div className={styles.userIcon}>
-                        <FontAwesomeIcon icon={faCircleUser} size="xl" />
+                        {dataUser.photoURL ? <img src={dataUser.photoURL} alt='User Avatar'></img> : <FontAwesomeIcon icon={faCircleUser} size="xl" />}
                     </div>
 
                     <div className={styles.userName} onClick={handleShowHeaderList}>
-                        Trần Anh Tuấn
-
+                        {dataUser.displayName ? dataUser.displayName : dataUser.email.split('@')[0]}
                     </div>
 
                     <FontAwesomeIcon icon={faCaretDown} />
@@ -49,7 +56,7 @@ function Header() {
                                 Settings
                             </li>
 
-                            <li>
+                            <li onClick={handleLogout}>
                                 <FontAwesomeIcon icon={faRightFromBracket} className={styles.iconHeader} />
                                 Logout
                             </li>

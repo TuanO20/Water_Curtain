@@ -4,6 +4,7 @@ import logo from '../../assets/images/drop_logo.svg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChalkboardUser } from '@fortawesome/free-solid-svg-icons';
 import { faFacebook, faInstagram, faXTwitter } from '@fortawesome/free-brands-svg-icons';
+import { NavLink } from 'react-router-dom';
 
 
 function Sidebar() {
@@ -20,10 +21,12 @@ function Sidebar() {
 
                 <div className={styles.sidebarList}>
                     <ul>
-                        <li>
-                            <FontAwesomeIcon icon={faChalkboardUser} className={styles.sidebarIcon}/>
-                            Guidelines
-                        </li>
+                        <NavLink to="/dashboard/guidelines">
+                            <li>
+                                <FontAwesomeIcon icon={faChalkboardUser} className={styles.sidebarIcon}/>
+                                Guidelines
+                            </li>
+                        </NavLink>
 
                         <li>
                             1. Import pictures
