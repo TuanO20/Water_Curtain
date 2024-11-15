@@ -3,7 +3,7 @@ import DefaultHome from "../layout/DefaultHome";
 import Draw from "../pages/Draw";
 import Login from "../pages/Login";
 import Welcome from "../components/Welcome";
-
+import PrivateRoute from "../components/PrivateRoute";
 
 export const routes = [
     {
@@ -23,12 +23,22 @@ export const routes = [
 
     {
         path: 'dashboard',
-        element: <DefaultDashBoard/>,
+        element: <PrivateRoute/>,
         children: [
             {
+                index: true,
+                element: <DefaultDashBoard/>
+            },
+            {
                 path: 'draw',
+                element: <Draw/>
+            },
+            {
+                path: 'guidelines',
                 element: <Draw/>
             }
         ]
     }
+
+   
 ];

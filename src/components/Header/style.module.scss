@@ -23,16 +23,23 @@
         position: relative;
 
         //min-width: ;
-        margin-left: 60vw;
+        margin-left: 58.5vw;
         margin-right: 20px;
         cursor: pointer;
 
         .userIcon {
-            //width: 2rem;
+            img {
+                display: flex;
+                align-items: center;
+                //margin-left: rem;
+                width: 2.5rem;
+                border-radius: 50%;
+            }
         }
 
         .userName {
-            margin: 0 1rem;
+            min-width: 7rem;
+            margin: 0 0.7rem;
             font-weight: bold;
 
             user-select: none;
