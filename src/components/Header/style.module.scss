@@ -24,7 +24,7 @@
 
         //min-width: ;
         margin-left: 58.5vw;
-        margin-right: 20px;
+        margin-right: 10px;
         cursor: pointer;
 
         .userIcon {
@@ -47,6 +47,7 @@
 
         .checkList {
             display: none;
+            z-index: 9;
 
             ul {
                 list-style-type: none;

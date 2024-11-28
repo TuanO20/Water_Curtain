@@ -7,7 +7,7 @@ import { faUser, faLock, faCircleCheck, faRectangleXmark } from '@fortawesome/fr
 import { faGoogle } from '@fortawesome/free-brands-svg-icons';
 
 import { auth, provider } from '../../firebase/config';
-import { signInWithEmailAndPassword, signInWithPopup } from 'firebase/auth';
+import { signInWithEmailAndPassword, signInWithPopup, sendPasswordResetEmail } from 'firebase/auth';
 
 import styles from './style.module.scss';
 import { useNavigate } from 'react-router-dom';

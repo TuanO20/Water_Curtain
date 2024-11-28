@@ -1,0 +1,47 @@
+.guidelines-container {
+    padding: 2rem 0;
+    
+    h3 {
+        color: #333;
+        font-weight: 600;
+    }
+
+    .step-card {
+        transition: all 0.3s ease;
+        border: none;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+        &:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .card-body {
+            padding: 2rem;
+        }
+
+        .icon-wrapper {
+            background-color: #f8f9fa;
+            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 1rem;
+
+            svg {
+                color: #007bff;
+            }
+        }
+
+        .card-title {
+            font-weight: 600;
+            color: #333;
+        }
+
+        .card-text {
+            color: #666;
+        }
+    }
+}

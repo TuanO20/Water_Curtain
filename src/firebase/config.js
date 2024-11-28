@@ -3,7 +3,8 @@ import { initializeApp } from "firebase/app";
 //import { getAnalytics } from "firebase/analytics";
 import { getAuth } from "firebase/auth";
 import { GoogleAuthProvider } from "firebase/auth";
-import { getFirestore } from "firebase/firestore";
+import { getDatabase } from "firebase/database";
+
 
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -13,6 +14,7 @@ import { getFirestore } from "firebase/firestore";
 const firebaseConfig = {
   apiKey: process.env.REACT_APP_API_KEY,
   authDomain: process.env.REACT_APP_AUTH_DOMAIN,
+  databaseURL: process.env.REACT_APP_DATABASE_URL,
   projectId: "watercurtain-39c47",
   storageBucket: "watercurtain-39c47.firebasestorage.app",
   messagingSenderId: "574153829306",
@@ -30,5 +32,5 @@ export const provider = new GoogleAuthProvider();
 // Firebase authentication
 export const auth = getAuth(app);
 
-// Firebase firestore
-export const db = getFirestore(app);
+// Initialize Realtime Database and get a reference to the service
+export const database = getDatabase(app);

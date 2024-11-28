@@ -1,0 +1,53 @@
+.drawingContainer {
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+  }
+  
+  .controlsContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .toolsSection {
+    display: flex;
+    align-items: center;
+  }
+  
+  .colorPicker {
+    margin-left: 1rem;
+  }
+  
+  .lineWidthSection {
+    display: flex;
+    align-items: center;
+  }
+  
+  .lineWidthSelect {
+    width: 100px;
+  }
+  
+  .textInputSection {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  
+  .fontSizeSelect {
+    width: 100px;
+  }
+  
+  .canvas {
+    border: 1px solid #000;
+    background: white;
+  }
+  
+  .submitButton {
+    margin-top: 1rem;
+    text-align: right;
+  }

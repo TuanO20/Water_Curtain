@@ -1,14 +1,14 @@
-$white: #e2e8f0;
-
 .container {
     display: flex;
     width: 100vw;
-    height: 100vh;
-
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
 
     .content {
         width: 80vw;
-        background-color: $white;
-        //padding: 1.5rem;
+        min-height: 100vh;
+        background-color: var(--white);
+        overflow-y: auto;
     }
 }

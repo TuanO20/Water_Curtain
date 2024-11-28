@@ -4,9 +4,6 @@ import AllRoutes from './components/AllRoutes';
 
 
 function App() {
-  console.log(process.env.REACT_APP_AUTH_DOMAIN);
-  console.log(process.env.REACT_APP_API_KEY);
-
   return (
       <AllRoutes/>
   );
